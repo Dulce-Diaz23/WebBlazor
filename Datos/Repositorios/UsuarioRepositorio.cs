@@ -54,20 +54,21 @@ namespace Datos.Repositorios
             return resultado;
         }
 
-        public async Task<IAsyncEnumerable<Usuario>> GetListaAsync()
+        public async Task<IEnumerable<Usuario>> GetListaAsync()
         {
             IEnumerable<Usuario> lista = new List<Usuario>();
             try
             {
                 using MySqlConnection _conexion = Conexion();
                 await _conexion.OpenAsync();
-                string sql = "SELECT * FROM usuario;"; //Sentencia Sql
+                string sql = "SELECT * FROM usuario;";
                 lista = await _conexion.QueryAsync<Usuario>(sql);
             }
             catch (Exception)
             {
             }
-            return (IAsyncEnumerable<Usuario>)lista;
+            return lista;
+
         }
 
         public async Task<Usuario> GetPorCodigoAsync(string codigo)
@@ -102,5 +103,7 @@ namespace Datos.Repositorios
             }
             return resultado;
         }
+
+
     }
 }

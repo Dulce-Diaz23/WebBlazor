@@ -9,6 +9,6 @@ namespace Datos.Interfaces
         Task<bool> NuevoAsync(Usuario usuario);
         Task<bool> ActualizarAsync(Usuario usuario);
         Task<bool> EliminarAsync(string codigo);
-        Task<IAsyncEnumerable<Usuario>> GetListaAsync();
+        Task<IEnumerable<Usuario>> GetListaAsync();
     }
 }
