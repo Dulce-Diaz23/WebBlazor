@@ -1,6 +1,6 @@
 ﻿namespace Blazor.Pages.MisUsuarios
 {
-    public class Usuarios
+    public partial class Usuarios
     {
     }
 }

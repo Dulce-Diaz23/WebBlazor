@@ -67,7 +67,7 @@ namespace Datos.Repositorios
             catch (Exception)
             {
             }
-            return lista;
+            return (IAsyncEnumerable<Usuario>)lista;
         }
 
         public async Task<Usuario> GetPorCodigoAsync(string codigo)
