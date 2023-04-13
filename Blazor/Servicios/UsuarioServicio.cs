@@ -29,7 +29,7 @@ namespace Blazor.Servicios
 
         public async Task<IEnumerable<Usuario>> GetListaAsync()
         {
-            return await usuarioRepositorio.GetListaAsync();////
+            return await usuarioRepositorio.GetListaAsync();
         }
 
         public async Task<Usuario> GetPorCodigoAsync(string codigo)

@@ -7,7 +7,7 @@ namespace Datos.Repositorios
 {
     public class LoginRepositorio : ILoginRepositorio
     {
-        private string CadenaConexion; //recibe la cadena de conexion
+        private string CadenaConexion; //recibe la cadena de conexion 
 
         public LoginRepositorio(string _cadenaConexion)
         {
@@ -28,7 +28,7 @@ namespace Datos.Repositorios
             {
                 using MySqlConnection _conexion = Conexion();
                 await _conexion.OpenAsync();
-                string sql = "SELECT 1 FROM USUARIO WHERE CodigoUsuario = @CodigoUsuario AND Contrasena = @Contrasena;"; //Sentencia Sql
+                string sql = "SELECT 1 FROM usuario WHERE CodigoUsuario = @CodigoUsuario AND Contrasena = @Contrasena;"; //Sentencia Sql
                 valido = await _conexion.ExecuteScalarAsync<bool>(sql, login);
             }
             catch (Exception)

@@ -6,7 +6,7 @@ namespace Blazor.Pages.MisUsuarios
 {
     public partial class Usuarios
     {
-        [Inject] private IUsuarioServicio usuarioServicio { get; set; } //inyeccion independiente
+        [Inject] private IUsuarioServicio usuarioServicio { get; set; } //inyeccion de dependencia
 
         private IEnumerable<Usuario> lista { get; set; }
 

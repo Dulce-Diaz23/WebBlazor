@@ -21,20 +21,26 @@ else
                 <th>Correo </th>
                 <th> Foto</th>
             </tr>
+
        </head>
+
        <tbody>
-            @foreach (Usuario user in lista)
+
+         
+            @foreach (Usuario user in lista)   //agregar los usuarios
             {
               <tr>
+          
                   <th>@user.CodigoUsuario</th>
                   <th>@user.Nombre</th>
                   <th>@user.Rol</th>
                   <th>@user.FechaCreacion</th>
                   <th>@user.EstaActivo.</th>
                   <th>@user.Correo</th>
-                  
+                     
               </tr>  
             }
         </tbody>
+
     </table>
 }
