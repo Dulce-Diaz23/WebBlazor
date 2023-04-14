@@ -7,8 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\MisUsuarios\EditarUsuario.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj" />
     <ProjectReference Include="..\Modelos\Modelos.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\MisUsuarios\EditarUsuario.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\MisUsuarios\EditarUsuario.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\MisUsuarios\EditarUsuario.razor" />
   </ItemGroup>
 
 </Project>

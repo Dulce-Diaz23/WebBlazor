@@ -10,19 +10,17 @@
 else
 {
     <table class=" table">
-       <head>
-
+       <thead>
             <tr>
-                <th> Codigo </th>
-                <th> Nombre </th>
-                <th> Rol </th>
-                <th> Fecha Creacion </th>
-                <th> Esta Activo</th>
+                <th>Código </th>
+                <th>Nombre </th>
+                <th>Rol </th>
+                <th>Fecha Creación </th>
+                <th>Está Activo</th>
                 <th>Correo </th>
-                <th> Foto</th>
+                <th>Foto</th>
             </tr>
-
-       </head>
+       </thead>
 
        <tbody>
 
@@ -35,9 +33,26 @@ else
                   <th>@user.Nombre</th>
                   <th>@user.Rol</th>
                   <th>@user.FechaCreacion</th>
-                  <th>@user.EstaActivo.</th>
+                    @if(user.EstaActivo)
+                    {
+                        <th>
+                            <span class="oi oi-circle-check" style=" color:green;"></span>
+                        </th>
+                    }
+                    else
+                    {
+                        <th>
+                            <span class="oi oi-circle-x" style=" color: red;"></span>
+                        </th>
+                    }
+
                   <th>@user.Correo</th>
-                     
+                    
+                  //Dirige a una ruta
+                  <th>
+                        <a class="btn btn-success" href="@($"/Usuarios/Editar")">Editar</a>
+                  </th>
+
               </tr>  
             }
         </tbody>
